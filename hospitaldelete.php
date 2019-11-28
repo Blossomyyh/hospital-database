@@ -6,7 +6,7 @@
     $uid= $_POST['uid'];
     echo $uid;
 
-    $sql= "DELETE FROM treatment WHERE tid =$uid";
+    $sql= "DELETE FROM hospital WHERE hid =$uid";
 
     if($db->query($sql)== TRUE){
         echo "<script>alert('Data Deleted Successfully')</script>";
@@ -14,7 +14,7 @@
     } else
         echo "<script>alert('Data Deleted Failed! Try again!')</script>";
         //echo "Fail to delete data !! Try again";
-    header("Location: http://localhost/~yuhanyin/db/treatment.php");
+    header('Location: hospital.php');
 
     exit;
 

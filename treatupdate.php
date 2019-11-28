@@ -56,7 +56,7 @@ $uid= $_GET['uid'];
         <div class="text-gray-400 text-uppercase px-3 px-lg-4 py-4 font-weight-bold small headings-font-family">MAIN</div>
         <ul class="sidebar-menu list-unstyled">
             <li class="sidebar-list-item"><a href="index.php" class="sidebar-link text-muted active"><i class="o-home-1 mr-3 text-gray"></i><span>Home</span></a></li>
-            <li class="sidebar-list-item"><a href="charts.html" class="sidebar-link text-muted"><i class="o-sales-up-1 mr-3 text-gray"></i><span>Charts</span></a></li>
+            <li class="sidebar-list-item"><a href="physician.php" class="sidebar-link text-muted"><i class="o-sales-up-1 mr-3 text-gray"></i><span>Charts</span></a></li>
             <li class="sidebar-list-item"><a href="treatment.php" class="sidebar-link text-muted"><i class="o-table-content-1 mr-3 text-gray"></i><span>Tables</span></a></li>
             <li class="sidebar-list-item"><a href="forms.html" class="sidebar-link text-muted"><i class="o-survey-1 mr-3 text-gray"></i><span>Forms</span></a></li>
             <li class="sidebar-list-item"><a href="#" data-toggle="collapse" data-target="#pages" aria-expanded="false" aria-controls="pages" class="sidebar-link text-muted"><i class="o-wireframe-1 mr-3 text-gray"></i><span>Pages</span></a>
@@ -145,7 +145,7 @@ $uid= $_GET['uid'];
                                         <i class="fas fa-user prefix"></i>
                                         <input type="text" name="uid" value="<?php    echo $uid ?>" id="inputid" class="form-control"
                                                readonly>
-                                        <label>User Id</label>
+                                        <label>Treatment ID</label>
                                     </div>
 
                                     <!-- Material input -->
@@ -153,7 +153,7 @@ $uid= $_GET['uid'];
                                         <i class="fas fa-user prefix"></i>
                                         <input type="text" name="TreatmentName" value="<?php    echo $TreatmentName ?>" id="inputfirstname"
                                                class="form-control">
-                                        <label for="inputfirstname">Medicine Name</label>
+                                        <label for="inputfirstname">Treatment Name</label>
                                     </div>
 
                                     <!-- Material input -->
@@ -161,14 +161,14 @@ $uid= $_GET['uid'];
                                         <i class="fas fa-user prefix"></i>
                                         <input type="text" name="TreatmentType" value="<?php    echo $TreatmentType ?>" id="inputlastname"
                                                class="form-control">
-                                        <label for="inputlastname">Company Name</label>
+                                        <label for="inputlastname">Treatment Type</label>
                                     </div>
                                     <!-- Material input -->
                                     <div class="md-form">
                                         <i class="fas fa-user prefix"></i>
                                         <input type="text" name="Deid" value="<?php    echo $Deid ?>" id="inputlastname"
                                                class="form-control">
-                                        <label for="inputlastname">Price</label>
+                                        <label for="inputlastname">Disease ID</label>
                                     </div>
                                     <!-- Material input -->
                                     <div class="md-form">
