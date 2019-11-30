@@ -28,7 +28,11 @@ if( isset($_POST['submit'])){
 
     $id = test_input($_POST['ID']);
     $PhyName= test_input( $_POST['PhyName']);
-    $Tel= test_input ( $_POST['Tel']);
+    if(is_numeric(test_input ( $_POST['Tel']))){
+        $Tel= test_input ( $_POST['Tel']);
+    } else{
+        echo "<script>alert('Data Added Failed!! Telephone number wrong!\";')</script>";
+    }
     $Spe = test_input($_POST['Spe']);
     $HID= test_input ( $_POST['HID']);
 
