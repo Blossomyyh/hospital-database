@@ -24,10 +24,7 @@
 <script src="js/charts-home.js"></script>
 <script src="js/front.js"></script>
 
-<footer>
-    Gobal Bank
 
-</footer>
 </body>
 
 

@@ -14,15 +14,16 @@ if( isset($_POST['submit'])){
     $uid=  $_POST['uid'];
 
     $PhysicianName= test_input( $_POST['PhysicianName']);
-    $Telephone= test_input ( $_POST['Telephone']);
+    $phone= test_input ( $_POST['phone']);
     $Special = test_input( $_POST['Special']);
     $Hosid= test_input ( $_POST['Hosid']);
-    $sql= "UPDATE physician SET phfname='$PhysicianName', phtel='$Phlephone', phspl='$Special', hid ='$Hosid'  WHERE phid=$uid";
+    $sql= "UPDATE physician SET phfname='$PhysicianName', phtel='$phone', phspl='$Special', hid ='$Hosid'  WHERE phid=$uid";
 
 
     if($db->query($sql)== TRUE){
+        //echo $sql;
+
         echo "<script>alert('Data Added Successfully')</script>";
-        echo "Data Added Successfully";
     } else
         echo "Fail to inser data !! Try again";
 
@@ -52,21 +53,10 @@ if( isset($_GET['uid'])) {
             <div class="text-gray-400 text-uppercase px-3 px-lg-4 py-4 font-weight-bold small headings-font-family">MAIN</div>
             <ul class="sidebar-menu list-unstyled">
                 <li class="sidebar-list-item"><a href="index.php" class="sidebar-link text-muted"><i class="o-home-1 mr-3 text-gray"></i><span>Home</span></a></li>
-                <li class="sidebar-list-item"><a href="physician.php" class="sidebar-link text-muted active"><i class="o-sales-up-1 mr-3 text-gray"></i><span>Charts</span></a></li>
-                <li class="sidebar-list-item"><a href="treatment.php" class="sidebar-link text-muted"><i class="o-table-content-1 mr-3 text-gray"></i><span>Tables</span></a></li>
-                <li class="sidebar-list-item"><a href="forms.html" class="sidebar-link text-muted"><i class="o-survey-1 mr-3 text-gray"></i><span>Forms</span></a></li>
-                <li class="sidebar-list-item"><a href="login.html" class="sidebar-link text-muted"><i class="o-exit-1 mr-3 text-gray"></i><span>Login</span></a></li>
-            </ul>
-            <div class="text-gray-400 text-uppercase px-3 px-lg-4 py-4 font-weight-bold small headings-font-family">EXTRAS</div>
-            <ul class="sidebar-menu list-unstyled">
-                <li class="nav-item" style="padding-left: 20px">
-                    <form id="searchForm" action="treatment.php" method="post" class="ml-auto d-none d-lg-block">
-                        <div class="form-group position-relative mb-0" >
-                            <button type="submit" name ="search"  value="search"  style="top: -3px; left: 0;" class="position-absolute bg-white border-0 p-0"><i class="o-search-magnify-1 text-gray text-lg"></i></button>
-                            <input type="text" placeholder="Search ..."  name="physician"  class="form-control form-control-sm border-0 no-shadow pl-4">
-                        </div>
-                    </form>
-                </li>
+                <li class="sidebar-list-item"><a href="physician.php" class="sidebar-link text-muted active"><i class="o-sales-up-1 mr-3 text-gray"></i><span>Physician</span></a></li>
+                <li class="sidebar-list-item"><a href="treatment.php" class="sidebar-link text-muted"><i class="o-table-content-1 mr-3 text-gray"></i><span>Treatment</span></a></li>
+                <li class="sidebar-list-item"><a href="hospital.php" class="sidebar-link text-muted"><i class="o-survey-1 mr-3 text-gray"></i><span>Hospital</span></a></li>
+                <li class="sidebar-list-item"><a href="login.html" class="sidebar-link text-muted"><i class="o-exit-1 mr-3 text-gray"></i><span>Logout</span></a></li>
             </ul>
         </div>
 
@@ -149,9 +139,9 @@ if( isset($_GET['uid'])) {
                     <!-- Material input -->
                     <div class="md-form">
                         <i class="fas fa-user prefix"></i>
-                        <input type="text" name="Telephone" value="<?php    echo $Telephone ?>" id="inputlastname"
+                        <input type="text" name="phone" value="<?php    echo $Telephone ?>" id="inputlastname"
                                class="form-control">
-                        <label for="inputlastname">Telephone</label>
+                        <label for="inputlastname">Phone</label>
                     </div>
                     <!-- Material input -->
                     <div class="md-form">

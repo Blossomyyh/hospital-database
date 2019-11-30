@@ -11,10 +11,10 @@
     if($db->query($sql)== TRUE){
         echo "<script>alert('Data Deleted Successfully')</script>";
         //echo "Data deleted Successfully";
-    } else
-        echo "<script>alert('Data Deleted Failed! Try again!')</script>";
+    } else{
+        echo "<script>alert('Data Deleted Failed! Try again!')</script>";}
         //echo "Fail to delete data !! Try again";
-    header('Location: hospital.php');
+//    header("Location: hospital.php");
 
     exit;
 

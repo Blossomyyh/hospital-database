@@ -11,7 +11,7 @@ if( isset($_POST['search']) ){
 
     $PhysicianName=test_input($_POST['physician']);
 //    echo $TreatmentName;
-    $sql = "SELECT * FROM physician where phfnanme = '$PhysicianName' " ;
+    $sql = "SELECT * FROM physician where phfname = '$PhysicianName' " ;
 //    echo $sql;
     $Physician= $db->query($sql);
 
@@ -64,15 +64,15 @@ if( isset($_POST['submit'])){
         <div class="text-gray-400 text-uppercase px-3 px-lg-4 py-4 font-weight-bold small headings-font-family">MAIN</div>
         <ul class="sidebar-menu list-unstyled">
               <li class="sidebar-list-item"><a href="index.php" class="sidebar-link text-muted"><i class="o-home-1 mr-3 text-gray"></i><span>Home</span></a></li>
-              <li class="sidebar-list-item"><a href="physician.php" class="sidebar-link text-muted active"><i class="o-sales-up-1 mr-3 text-gray"></i><span>Charts</span></a></li>
-              <li class="sidebar-list-item"><a href="treatment.php" class="sidebar-link text-muted"><i class="o-table-content-1 mr-3 text-gray"></i><span>Tables</span></a></li>
-              <li class="sidebar-list-item"><a href="forms.html" class="sidebar-link text-muted"><i class="o-survey-1 mr-3 text-gray"></i><span>Forms</span></a></li>
-              <li class="sidebar-list-item"><a href="login.html" class="sidebar-link text-muted"><i class="o-exit-1 mr-3 text-gray"></i><span>Login</span></a></li>
+              <li class="sidebar-list-item"><a href="physician.php" class="sidebar-link text-muted active"><i class="o-sales-up-1 mr-3 text-gray"></i><span>Physician</span></a></li>
+              <li class="sidebar-list-item"><a href="treatment.php" class="sidebar-link text-muted"><i class="o-table-content-1 mr-3 text-gray"></i><span>Treatment</span></a></li>
+              <li class="sidebar-list-item"><a href="hospital.php" class="sidebar-link text-muted"><i class="o-survey-1 mr-3 text-gray"></i><span>Hospital</span></a></li>
+              <li class="sidebar-list-item"><a href="login.html" class="sidebar-link text-muted"><i class="o-exit-1 mr-3 text-gray"></i><span>Logout</span></a></li>
         </ul>
         <div class="text-gray-400 text-uppercase px-3 px-lg-4 py-4 font-weight-bold small headings-font-family">EXTRAS</div>
           <ul class="sidebar-menu list-unstyled">
               <li class="nav-item" style="padding-left: 20px">
-                  <form id="searchForm" action="treatment.php" method="post" class="ml-auto d-none d-lg-block">
+                  <form id="searchForm" action="physician.php" method="post" class="ml-auto d-none d-lg-block">
                       <div class="form-group position-relative mb-0" >
                           <button type="submit" name ="search"  value="search"  style="top: -3px; left: 0;" class="position-absolute bg-white border-0 p-0"><i class="o-search-magnify-1 text-gray text-lg"></i></button>
                           <input type="text" placeholder="Search ..."  name="physician"  class="form-control form-control-sm border-0 no-shadow pl-4">
@@ -174,10 +174,11 @@ if( isset($_POST['submit'])){
                                       <input id="inlineFormInput" name="ID" type="text" value="<?php echo $id ?>" placeholder="Physician ID" class="mr-3 form-control">
                                   </div>
                                   <div class="form-group">
+<!--   Use name to get value from input                                   -->
                                       <input id="inlineFormInputGroup" name="PhyName" type="text" value="<?php    echo $PhyName ?>" placeholder="Physician Name" class="mr-3 form-control">
                                   </div>
                                   <div class="form-group">
-                                      <input id="inlineFormInputGroup" name="Tele" type="text" value="<?php    echo $Tel ?>" placeholder="Telephone" class="mr-3 form-control">
+                                      <input id="inlineFormInputGroup" name="Tel" type="text" value="<?php    echo $Tel ?>" placeholder="Telephone" class="mr-3 form-control">
                                   </div>
                                   <div class="form-group">
                                       <input id="inlineFormInputGroup" name="Spe" type="text" value="<?php    echo $Spe ?>" placeholder="Special" class="mr-3 form-control">

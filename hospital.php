@@ -42,7 +42,7 @@ if( isset($_POST['submit'])){
 //        echo $HospitalName;
 //        echo $HospitalAddress;
 //        echo $HCity;
-        //echo "<script>alert('Data Added Successfully')</script>";
+echo "<script>alert('Data Added Successfully')</script>";
         //header("hospital.php");
         //$this->redirect("treatupdate.php" ));
 //        echo "Data Added Successfully";
@@ -75,7 +75,7 @@ if( isset($_POST['submit'])){
               <li class="sidebar-list-item"><a href="charts.html" class="sidebar-link text-muted"><i class="o-sales-up-1 mr-3 text-gray"></i><span>Charts</span></a></li>
               <li class="sidebar-list-item"><a href="treatment.php" class="sidebar-link text-muted"><i class="o-table-content-1 mr-3 text-gray"></i><span>Treatment</span></a></li>
               <li class="sidebar-list-item"><a href="hospital.php" class="sidebar-link text-muted active"><i class="o-survey-1 mr-3 text-gray"></i><span>Hospital</span></a></li>
-              <li class="sidebar-list-item"><a href="login.html" class="sidebar-link text-muted"><i class="o-exit-1 mr-3 text-gray"></i><span>Login</span></a></li>
+              <li class="sidebar-list-item"><a href="login.html" class="sidebar-link text-muted"><i class="o-exit-1 mr-3 text-gray"></i><span>Logout</span></a></li>
         </ul>
         <div class="text-gray-400 text-uppercase px-3 px-lg-4 py-4 font-weight-bold small headings-font-family">EXTRAS</div>
         <ul class="sidebar-menu list-unstyled">
@@ -137,8 +137,7 @@ if( isset($_POST['submit'])){
 
                           <td>
 
-                              <!-- update area !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!--> 
-                              <form method="get" action ="treatupdate.php" method="post" id="edit<?php echo $treat['hid']?>" style="display:none; " >
+                              <form method="get" action ="hospitalupdate.php"  id="edit<?php echo $treat['hid']?>" style="display:none; " >
                                   <input value="<?php echo $treat['hid']?>" name = 'uid' />
                               </form>
 
@@ -205,8 +204,8 @@ if( isset($_POST['submit'])){
                                   <input id="inlineFormInputGroup" name="ZipCode" type="text" value="<?php    echo $HZip ?>" placeholder="ZipCode" class="mr-3 form-control">
                               </div>
                               <div class="form-group">
-                                  <!-- <button type="submit" name="submit" class="btn btn-primary">Add</button> -->
-                                  <button type="submit" name="search" value = "seach" class="btn btn-primary">Add</button>
+                                   <button type="submit" name="submit" class="btn btn-primary">Add</button>
+<!--                                  <button type="submit" name="search" value = "seach" class="btn btn-primary">Add</button>-->
 
                               </div>
                           </form>
